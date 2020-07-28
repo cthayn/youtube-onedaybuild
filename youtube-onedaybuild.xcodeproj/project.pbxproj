@@ -13,6 +13,9 @@
 		5A41E57B24CF7AE50032216F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A41E57924CF7AE50032216F /* Main.storyboard */; };
 		5A41E57D24CF7AEA0032216F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A41E57C24CF7AEA0032216F /* Assets.xcassets */; };
 		5A41E58024CF7AEA0032216F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A41E57E24CF7AEA0032216F /* LaunchScreen.storyboard */; };
+		5A41E58824D071B70032216F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41E58724D071B70032216F /* Constants.swift */; };
+		5A41E58A24D074150032216F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41E58924D074150032216F /* Video.swift */; };
+		5A41E58C24D0747A0032216F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41E58B24D0747A0032216F /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		5A41E57C24CF7AEA0032216F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A41E57F24CF7AEA0032216F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A41E58124CF7AEA0032216F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A41E58724D071B70032216F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5A41E58924D074150032216F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		5A41E58B24D0747A0032216F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				5A41E57324CF7AE50032216F /* AppDelegate.swift */,
 				5A41E57524CF7AE50032216F /* SceneDelegate.swift */,
 				5A41E57724CF7AE50032216F /* ViewController.swift */,
+				5A41E58924D074150032216F /* Video.swift */,
+				5A41E58724D071B70032216F /* Constants.swift */,
+				5A41E58B24D0747A0032216F /* Model.swift */,
 				5A41E57924CF7AE50032216F /* Main.storyboard */,
 				5A41E57C24CF7AEA0032216F /* Assets.xcassets */,
 				5A41E57E24CF7AEA0032216F /* LaunchScreen.storyboard */,
@@ -141,6 +150,9 @@
 				5A41E57824CF7AE50032216F /* ViewController.swift in Sources */,
 				5A41E57424CF7AE50032216F /* AppDelegate.swift in Sources */,
 				5A41E57624CF7AE50032216F /* SceneDelegate.swift in Sources */,
+				5A41E58C24D0747A0032216F /* Model.swift in Sources */,
+				5A41E58824D071B70032216F /* Constants.swift in Sources */,
+				5A41E58A24D074150032216F /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
