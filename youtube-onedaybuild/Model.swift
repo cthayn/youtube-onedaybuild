@@ -8,8 +8,17 @@
 
 import Foundation
 
+// Protocol for ModelDelegate
+protocol ModelDelegate {
+  func videosFetched(_ videos:[Video])
+  }
+
 class Model {
   
+  // declare delegate must conform to protocol
+  var delegate:ModelDelegate?
+
+
   func  getVideos() {
     
     // Create a URL object
@@ -38,7 +47,18 @@ class Model {
         
         let response = try decoder.decode(Response.self, from: data!)
       
-        dump(response)
+        if response.items != nil {
+        
+          // place the update of the video list in the main thread
+          DispatchQueue.main.sync {
+              
+            // Call the "videosFetched" method of the delegate
+              self.delegate?.videosFetched(response.items!)
+          }
+
+        }
+        
+ //       dump(response)
       }
       
       catch {
