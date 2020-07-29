@@ -8,14 +8,15 @@
 
 import Foundation
 
-// Protocol for ModelDelegate
+// Create custom protocol for ModelDelegate
 protocol ModelDelegate {
   func videosFetched(_ videos:[Video])
   }
 
+// Create Model class
 class Model {
   
-  // declare delegate must conform to protocol
+  // declare that the delegate must conform to custom protocol
   var delegate:ModelDelegate?
 
 
@@ -45,11 +46,13 @@ class Model {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         
+        // decode response from data
         let response = try decoder.decode(Response.self, from: data!)
       
+        // if response is not nil
         if response.items != nil {
         
-          // place the update of the video list in the main thread
+          // place the update of the video list in the main thread, this is needed so the videoFetch func is not running in the background thread (performace issue)
           DispatchQueue.main.sync {
               
             // Call the "videosFetched" method of the delegate
@@ -61,6 +64,7 @@ class Model {
  //       dump(response)
       }
       
+        // if error
       catch {
         
       }

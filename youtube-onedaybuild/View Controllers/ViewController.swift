@@ -8,11 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ModelDelegate {
-  
-  
-  
 
+// include the delegates, including the custom model delegate
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ModelDelegate {
   
   
   @IBOutlet weak var tableView: UITableView!
@@ -63,13 +61,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   // with number of rows, this method will populate the cells
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEOCELL_ID, for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEOCELL_ID, for: indexPath) as! VideoTableViewCell
     
     // Configure the cells with the data
-    // Get the title for the video for each cell
-    let title = self.videos[indexPath.row].title
+    // Get the video for each cell
+    let video = self.videos[indexPath.row]
     
-    cell.textLabel?.text = title
+    cell.setCell(video)
     
     // Return the cell to View Controller for displaying
     
